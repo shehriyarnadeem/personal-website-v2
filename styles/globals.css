@@ -19,12 +19,22 @@
   h4 {
     @apply leading-tight text-2xl font-light font-serif;
   }
+  pre {
+    @apply dark:bg-gray-800 dark:hover:bg-gray-900 p-10 border bg-opacity-5
+  }
 }
 
 @layer utilities {
   p {
-    @apply leading-tight dark:text-gray-400 text-gray-900 font-sans font-light;
+    @apply leading-snug dark:text-gray-400 text-gray-900 font-sans font-light my-4;
   }
+  img {
+    @apply my-10;
+  }
+  code {
+    dark:text-white;
+  }
+
 }
 
 :root {

@@ -4,6 +4,9 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   mode: "jit",
   theme: {
+    plugins: [
+      require('tailwindcss/typography')
+    ],
     extend: {
       backgroundColor: {
         primary: "var(--bg-primary)",

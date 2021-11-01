@@ -17,11 +17,12 @@ export const getUserArticles = ($username: string, $page?: number) => {
 }
 
 export const getBlogPost = (slug: string, hostname: string = "shehriyarnadeem") => {
+  
     return (
         `{
             post(
-            slug: ${slug},
-            hostname:${hostname}
+            slug: "${slug}",
+            hostname:"${hostname}"
             ){
               slug
               title
@@ -29,7 +30,6 @@ export const getBlogPost = (slug: string, hostname: string = "shehriyarnadeem") 
               contentMarkdown
               dateUpdated
               brief
-              author
               coverImage
               dateAdded
               type

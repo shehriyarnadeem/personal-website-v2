@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 function Header() {
     const { colorTheme, setTheme } = useDarkMode();
-    console.log(colorTheme)
+    
     const DarkModeButton = () => {
 
         if (colorTheme === "light") {
