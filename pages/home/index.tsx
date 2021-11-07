@@ -9,8 +9,8 @@ import { PencilIcon, LightBulbIcon } from "@heroicons/react/outline";
 
 function Home(props) {
 
-  const blogsData=[{
-    blogs:{
+  const blogs=[{
+    
       data:{
         user:{
           publication:
@@ -31,7 +31,7 @@ function Home(props) {
           
         }
       }
-    }
+    
    }]
 
   const {
@@ -42,7 +42,7 @@ function Home(props) {
         },
       },
     },
-  } = props ? props.props: blogsData;
+  } = props ? props.props: blogs;
   return (
     <div>
       <Introduction />
