@@ -7,7 +7,32 @@ import { PencilIcon, LightBulbIcon } from "@heroicons/react/outline";
 
 
 
-function Home({ props }) {
+function Home(props) {
+
+  const blogsData=[{
+    blogs:{
+      data:{
+        user:{
+          publication:
+            {posts:[{
+              brief:"123",
+              coverImage:'123',
+              slug:"123",
+              title:'123'
+            },
+            {
+              brief:"123",
+              coverImage:'123',
+              slug:"123",
+              title:'123'
+            }
+          ]
+            }
+          
+        }
+      }
+    }
+   }]
 
   const {
     blogs: {
@@ -17,19 +42,17 @@ function Home({ props }) {
         },
       },
     },
-  } = props;
-
-
+  } = props ? props.props: blogsData;
   return (
     <div>
       <Introduction />
       <div className="flex-1">
         <Heading title="WRITINGS" Icon={PencilIcon} />
         <div className="py-4 lg:px-0 px-3 mx-auto">
-          {posts &&
+          {posts.length > 0 ?
             posts.map((post) => {
-              return <CardList post={post} key={post.id}/>;
-            })}
+              return<CardList post={post} key={post.id}/>;
+            }): (<div key={Math.random()}></div>)}
         </div>
       </div>
 
