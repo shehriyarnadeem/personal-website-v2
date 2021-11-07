@@ -20,21 +20,20 @@
     @apply leading-tight text-2xl font-light font-serif;
   }
   pre {
-    @apply dark:bg-gray-800 dark:hover:bg-gray-900 p-10 border bg-opacity-5
+    @apply dark:bg-gray-900 bg-green-900 p-10  border bg-opacity-5;
   }
 }
 
 @layer utilities {
   p {
-    @apply leading-snug dark:text-gray-400 text-gray-900 font-sans font-light my-4;
+    @apply font-sans;
   }
   img {
     @apply my-10;
   }
   code {
-    dark:text-white;
+    dark: text-white;
   }
-
 }
 
 :root {

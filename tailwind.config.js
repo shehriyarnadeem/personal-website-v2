@@ -4,10 +4,10 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   mode: "jit",
   theme: {
-    plugins: [
-      require('tailwindcss/typography')
-    ],
     extend: {
+      dropShadow: {
+        '3xl': '0 35px 35px rgba(0, 0, 0, 0)',
+      },
       backgroundColor: {
         primary: "var(--bg-primary)",
         secondary: "var(--bg-secondary)",

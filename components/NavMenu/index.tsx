@@ -2,8 +2,7 @@ import React from "react";
 import Link from "next/link";
 const content = [
   { name: "Blog", link: "/blogs", key: 1 },
-  { name: "Work", link: "/work", key: 2 },
-  { name: "Client", link: "/client", key: 3 },
+  { name: "Projects", link: "/projects", key: 2 },
   { name: "About", link: "/about", key: 4 },
 ];
 

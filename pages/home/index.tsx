@@ -5,7 +5,10 @@ import Heading from "../../components/Heading";
 
 import { PencilIcon, LightBulbIcon } from "@heroicons/react/outline";
 
+
+
 function Home({ props }) {
+
   const {
     blogs: {
       data: {
@@ -16,6 +19,7 @@ function Home({ props }) {
     },
   } = props;
 
+
   return (
     <div>
       <Introduction />
@@ -24,7 +28,7 @@ function Home({ props }) {
         <div className="py-4 lg:px-0 px-3 mx-auto">
           {posts &&
             posts.map((post) => {
-              return <CardList post={post} />;
+              return <CardList post={post} key={post.id}/>;
             })}
         </div>
       </div>

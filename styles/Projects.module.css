@@ -1,0 +1,14 @@
+.containerDark {
+  @apply dark:bg-green-900 
+           
+           mt-7
+  
+    
+}
+
+/* @apply bg-green-900 
+bg-footer 
+mt-7 border-l-8 
+border-b-8 
+border-green-500 
+shadow-2xl */

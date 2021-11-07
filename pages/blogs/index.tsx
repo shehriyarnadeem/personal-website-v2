@@ -13,7 +13,7 @@ function Blogs(params) {
             <div className="flex flex-col lg:mx-auto  lg:w-[66%]">
                 <div>
                     <Heading title="Blogs" Icon={PencilIcon} extrastyle="font-bold" />
-                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[1px] w-[39rem]">Sometimes i write about things i learn in web development and also stuff that i find intresting</p>
+                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl w-[39rem]">Sometimes i write about things i learn in web development and also stuff that i find intresting</p>
                 </div>
                 <div className="flex flex-col  py-9">
                     {posts.map(post => {
