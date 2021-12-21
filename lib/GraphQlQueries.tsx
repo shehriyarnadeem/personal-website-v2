@@ -9,6 +9,7 @@ export const getUserArticles = ($username: string, $page?: number) => {
                     slug
                     coverImage
                     brief
+                    dateAdded
                 }
             }
         }

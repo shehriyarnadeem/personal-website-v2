@@ -4,6 +4,7 @@ import Heading from '../../components/Heading'
 import { getUserArticles } from '../../lib/GraphQlQueries';
 import { sendGraphQlQueryPost } from '../../lib/helpers'
 import { PencilIcon } from "@heroicons/react/outline";
+import Link from 'next/link'
 import Image from 'next/image'
 function Blogs(params) {
     const { blogs: { data: { user: { publication: { posts } } } } } = params;
@@ -18,12 +19,13 @@ function Blogs(params) {
                 <div className="flex flex-col  py-9">
                     {posts.map(post => {
                         return (
-                            <>
-                                <div className="">
+
+                            <><div className="cursor-pointer" key={Math.random()}>
+                                <Link href={`/blogs/${post.slug}`}>
                                     <Image src={post.coverImage} className="rounded-lg shadow-lg" width={550} height={300} objectFit="contain" />
-                                </div>
-                                <CardList post={post} />
-                            </>
+                                </Link>
+                            </div><CardList post={post} /></>
+
 
                         )
                     })}

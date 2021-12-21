@@ -5,22 +5,22 @@
 
 @layer base {
   h1 {
-    @apply leading-tight text-2xl text-black dark:text-white;
+    @apply leading-tight text-2xl text-black dark:text-white mt-4 ;
   }
 
   h2 {
-    @apply leading-tight  text-4xl font-extrabold lg:mt-0  sm:text-left md:text-center lg:text-left font-poppins text-black dark:text-white;
+    @apply leading-tight  text-4xl font-extrabold lg:mt-0  sm:text-left md:text-center lg:text-left font-poppins text-black dark:text-white mb-4;
   }
 
   h3 {
-    @apply leading-tight text-3xl text-black dark:text-white;
+    @apply leading-tight text-3xl text-black dark:text-white mt-4 ;
   }
 
   h4 {
-    @apply leading-tight text-2xl font-light font-serif;
+    @apply leading-tight text-2xl font-light font-serif mt-4 ;
   }
   pre {
-    @apply dark:bg-gray-900 bg-green-900 p-10  border bg-opacity-5;
+    @apply dark:bg-gray-900 bg-green-900 p-10  w-max mt-10 mb-5  border bg-opacity-5;
   }
 }
 

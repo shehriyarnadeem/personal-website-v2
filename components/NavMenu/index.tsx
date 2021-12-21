@@ -15,7 +15,7 @@ function NavMenu() {
             <Link href={`${item.link}`} key={item.key}>
               <li
                 key={item.key}
-                className="text-lg font-extrabold dark:text-gray-300  dark:hover:text-accent hover:text-blue-900 text-gray-900 cursor-pointer font-poppins "
+                className="text-lg font-light dark:text-gray-300  dark:hover:text-accent hover:text-blue-900 text-gray-900 cursor-pointer font-poppins "
               >
                 {item.name}
               </li>

@@ -43,6 +43,7 @@ function Home(props) {
       },
     },
   } = props ? props.props: blogs;
+
   return (
     <div>
       <Introduction />
