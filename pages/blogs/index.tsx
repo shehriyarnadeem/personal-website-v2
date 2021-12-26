@@ -41,6 +41,7 @@ export async function getStaticProps() {
     const blogs = await sendGraphQlQueryPost(getUserArticles("shehriyarnadeem", 0));
 
     return {
+        revalidate: 7200,
         props: { blogs }
     }
 }

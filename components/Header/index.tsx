@@ -28,7 +28,7 @@ function Header() {
     return (
         <div className="flex w-full  items-center bg-primary dark:bg-primary py-9  lg:mr-[7rem] md:mr-[3rem] lg:justify-evenly md:justify-between sm:justify-between" >
             {/* left */}
-            <div className="flex justify-around items-center">
+            <div className="flex justify-around items-baseline">
                 <div className="lg:pl-[0rem] pr-[10rem] px-10">
                     <Link href="/"><a className="hover:underline cursor-pointer"><h1>Shehriyar Nadeem</h1></a></Link>
                 </div>

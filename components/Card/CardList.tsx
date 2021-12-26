@@ -19,7 +19,7 @@ const CardItem = ({ title, brief, slug,dateAdded }) => {
 
                 <div className="flex flex-col space-y-2 py-3 px-3 cursor-pointer max-w-2xl">
                     <h3 className="font-jura font-semibold dark:group-hover:text-white group-hover:text-blue-900">{title}</h3>
-                    <p className='dark:group-hover:text-gray-300 group-hover:text-gray-800 py-3'>{brief}</p>
+                    <p className='dark:group-hover:text-gray-300 group-hover:text-gray-800 py-3 dark:text-gray-300 text-gray-800'>{brief}</p>
                 </div>
                 <div className=" mt-[51px]  pr-4 dark:group-hover:text-white">
                     <p>{date}</p>
