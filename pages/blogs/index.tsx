@@ -1,11 +1,12 @@
-import React from 'react'
-import CardList from '../../components/Card'
-import Heading from '../../components/Heading'
+import React from 'react';
+import CardList from '../../components/Card';
+import Heading from '../../components/Heading';
 import { getUserArticles } from '../../lib/GraphQlQueries';
 import { sendGraphQlQueryPost } from '../../lib/helpers'
 import { PencilIcon } from "@heroicons/react/outline";
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
+
 function Blogs(params) {
     const { blogs: { data: { user: { publication: { posts } } } } } = params;
 
@@ -22,14 +23,11 @@ function Blogs(params) {
 
                             <><div className="cursor-pointer" key={Math.random()}>
                                 <Link href={`/blogs/${post.slug}`}>
-                                    <Image src={post.coverImage} className="rounded-lg shadow-lg" width={550} height={300} objectFit="contain" />
+                                    <Image src={post.coverImage || 'https://dummyimage.com/250/ffffff/000000 '} className="rounded-lg shadow-lg" width={550} height={300} objectFit="contain" alt="dummy"/>
                                 </Link>
                             </div><CardList post={post} /></>
-
-
                         )
                     })}
-
                 </div>
                 <div className="py-9"></div>
             </div>

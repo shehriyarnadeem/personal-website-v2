@@ -4,6 +4,7 @@ const content = [
   { name: "Blog", link: "/blogs", key: 1 },
   { name: "Projects", link: "/projects", key: 2 },
   { name: "About", link: "/about", key: 4 },
+  { name: "Home", link: "/", key: 5 },
 ];
 
 function NavMenu() {
