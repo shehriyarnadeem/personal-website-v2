@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavMenu from '../NavMenu';
 import { useDarkMode } from '../../lib/hooks'
 import Button from '../UI/Button';
@@ -6,6 +6,8 @@ import Link from 'next/link'
 
 function Header() {
     const { colorTheme, setTheme } = useDarkMode();
+    const [ openMobileMenu, setMobileMenu ] = useState(false);
+
     
     const DarkModeButton = () => {
 
@@ -26,21 +28,23 @@ function Header() {
     }
 
     return (
-        <div className="flex w-full  items-center bg-primary dark:bg-primary py-9  lg:mr-[7rem] md:mr-[3rem] lg:justify-evenly md:justify-between sm:justify-between" >
-            {/* left */}
-            <div className="flex justify-around items-baseline">
-                <div className="lg:pl-[0rem] pr-[10rem] px-10">
-                    <Link href="/"><a className="hover:underline cursor-pointer"><h1>Shehriyar Nadeem</h1></a></Link>
-                </div>
 
-                {/* Center */}
-                <NavMenu />
-            </div>
-
-            <div className="flex self-center">
-                <DarkModeButton />
-            </div>
-        </div>
+<nav className="bg-primary dark:bg-primary  px-2 sm:px-4 py-2.5 rounded ">
+  <div className="container flex flex-wrap justify-between items-center mx-auto">
+  <div>
+    <Link href="/"><a className="hover:underline cursor-pointer"><h1>Shehriyar Nadeem</h1></a></Link>
+ </div>
+  <div className="flex items-center md:order-2">
+       <DarkModeButton />
+      <Button onClickHandler={()=> setMobileMenu(!openMobileMenu)} className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </Button>
+  </div>
+  {/* Center */}
+        <NavMenu open={openMobileMenu} />
+  </div>
+</nav>
     )
 }
 

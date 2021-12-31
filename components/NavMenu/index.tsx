@@ -6,18 +6,19 @@ const content = [
   { name: "About", link: "/about", key: 4 },
 ];
 
-function NavMenu() {
+function NavMenu({open}) {
+console.log(open);
   return (
-    <div className="flex items-center ">
-      <ul className="hidden lg:flex lg:space-x-7">
+    <div className={open ? "justify-between w-full md:flex md:w-[50%]  mt-[20px] md:order-1":"hidden justify-between w-full md:flex md:w-[50%]  mt-[20px] md:order-1"}>
+      <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
         {content.map((item) => {
           return (
             <Link href={`${item.link}`} key={item.key}>
               <li
                 key={item.key}
-                className="text-lg font-light dark:text-gray-300  dark:hover:text-accent hover:text-blue-900 text-gray-900 cursor-pointer font-poppins "
+                className="text-lg font-light dark:text-green-400  dark:hover:text- hover:text-blue-900 text-gray-900 cursor-pointer font-poppins "
               >
-                {item.name}
+               <span className="block py-2 pr-4 pl-3 dark:text-white dark:hover:text-green-600  text-black hover:text-gray-500 rounded md:bg-transparent md:p-0"> {item.name}</span>
               </li>
             </Link>
           );
