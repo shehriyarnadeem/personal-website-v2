@@ -29,7 +29,7 @@ function Header() {
 
     return (
 
-<nav className="bg-primary dark:bg-primary  px-2 sm:px-4 py-2.5 rounded ">
+<nav className="bg-primary dark:bg-primary  px-2 sm:px-4 py-2.5 rounded  lg:w-full md:w-full">
   <div className="container flex flex-wrap justify-between items-center mx-auto">
   <div>
     <Link href="/"><a className="hover:underline cursor-pointer"><h1>Shehriyar Nadeem</h1></a></Link>

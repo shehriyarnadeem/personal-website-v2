@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 @layer base {
+
   h1 {
     @apply leading-tight text-2xl text-black dark:text-white mt-4 ;
   }
