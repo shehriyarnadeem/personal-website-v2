@@ -104,7 +104,7 @@ const libraries = [
 function Projects() {
 
     return (
-        <div className="min-w-screen-lg min-h-screen bg-primary dark:bg-primary" >
+        <div className="min-h-screen bg-primary dark:bg-primary" >
             <div className="flex flex-col lg:mx-auto  lg:w-[66%]">
                 <div>
                     <Heading title="Projects" Icon={LightBulbIcon} extrastyle="font-bold" />

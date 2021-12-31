@@ -5,6 +5,10 @@
 
 @layer base {
 
+  body {
+    @apply lg:w-full md:w-full w-[39em]
+  }
+
   h1 {
     @apply leading-tight text-2xl text-black dark:text-white mt-4 ;
   }
@@ -23,6 +27,7 @@
   pre {
     @apply dark:bg-gray-900 bg-green-900 p-10  w-max mt-10 mb-5  border bg-opacity-5;
   }
+  
 }
 
 @layer utilities {

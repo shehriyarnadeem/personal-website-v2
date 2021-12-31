@@ -5,6 +5,9 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      width: {
+        'fit-content': 'fit-content(20em)',
+      },
       dropShadow: {
         '3xl': '0 35px 35px rgba(0, 0, 0, 0)',
       },

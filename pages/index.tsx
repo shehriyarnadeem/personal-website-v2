@@ -74,7 +74,7 @@ export default function index(props) {
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100" rel="stylesheet"></link>
       </Head>
 
-      <main className="min-h-screen bg-primary dark:bg-primary place-items-center grid">
+      <main className="min-h-screen  bg-primary dark:bg-primary place-items-center grid">
         <div>
           <Introduction />
           <div className="flex-1">
