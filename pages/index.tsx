@@ -65,13 +65,15 @@ export default function index(props) {
     />
     <meta name="twitter:alt" content="Shehriyar Nadeem" />
     <link rel="canonical" href="http://shehriyarndeem.dev" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100" rel="stylesheet"></link>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100" rel="stylesheet"></link>
+    {/* <!-- Fathom - beautiful, simple website analytics --> */}
+    <script src="https://cdn.usefathom.com/script.js" data-site="HXSYKITK" defer></script>
+   {/* <!-- / Fathom --> */}
       </Head>
 
       <main className="min-h-screen  bg-primary dark:bg-primary place-items-center grid">
