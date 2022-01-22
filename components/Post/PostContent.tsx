@@ -6,7 +6,7 @@ import CodeBlock from "../CodeBlock"
 
 function PostContent({ title, image, date, content }) {
   return (
-    <article className="w-[95%] max-w-[63rem] mx-auto ">
+    <article className="w-[95%] max-w-[78rem] mx-auto ">
       <PostHeader title={title} image={image} />
       <div>
         <Image src={image} width={1000} height={500} objectFit="contain" />

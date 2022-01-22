@@ -6,7 +6,7 @@
 @layer base {
 
   body {
-    @apply lg:w-full md:w-full w-[39em]
+    @apply lg:w-full md:w-full min-w-max
   }
 
   h1 {
