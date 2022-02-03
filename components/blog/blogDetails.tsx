@@ -4,7 +4,7 @@ import { convertDate } from '../../common/utils/blogUtils';
 function BlogDetails({post}) {
 const dateAdded = convertDate(post.dateAdded);
   return  (
-        <div className='space-y-10 mb-5'>
+        <div className='space-y-10'>
         <h1 className="text-3xl mt-10 mb-3">{post.title}</h1>
         <img src={post.coverImage} />
         <div className="flex items-center space-x-4">

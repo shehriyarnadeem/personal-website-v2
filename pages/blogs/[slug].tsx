@@ -1,7 +1,7 @@
 import React from 'react'
 import { sendGraphQlQueryPost } from '../../common/utils/apiUtils';
 import { getBlogPost, getUserArticles } from '../../common/GraphQlQueries';
-import { BlogContent, BlogDetails } from '../../components/Blog';
+import { BlogContent, BlogDetails } from '../../components/blog';
 
 function BlogPost(props) {
     const { data: { post } } = props.data;

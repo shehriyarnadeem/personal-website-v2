@@ -6,7 +6,7 @@
 @layer base {
 
   body {
-    @apply dark:bg-primary bg-primary m-0
+    @apply dark:bg-primary bg-primary
   }
 
   h1 {
