@@ -4,8 +4,8 @@ import Introduction from "../components/Home/Introduction";
 import CardList from "../components/Card";
 import Heading from "../components/Heading";
 import { PencilIcon } from "@heroicons/react/outline";
-import { getUserArticles } from '../lib/GraphQlQueries';
-import { sendGraphQlQueryPost } from '../lib/helpers'
+import { getUserArticles } from '../common/GraphQlQueries';
+import { sendGraphQlQueryPost } from '../common/utils/apiUtils'
 
 export async function getStaticProps() {
 

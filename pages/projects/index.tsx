@@ -1,9 +1,7 @@
 import React from 'react'
 import Heading from '../../components/Heading'
-import Link from 'next/dist/client/link';
 import { LightBulbIcon } from "@heroicons/react/outline";
 import Box from '../../components/ProjectBox/Box'
-import { gitApiRequest } from '../../lib/helpers';
 const projects = [{
     title: 'Personal Website',
     desc: "My presonall project",
@@ -104,7 +102,7 @@ const libraries = [
 function Projects() {
 
     return (
-        <div className="min-h-screen bg-primary dark:bg-primary" >
+        <div className="min-h-screen" >
             <div className="flex flex-col lg:mx-auto  lg:w-[66%]">
                 <div>
                     <Heading title="Projects" Icon={LightBulbIcon} extrastyle="font-bold" />

@@ -5,7 +5,7 @@ import {  EmojiHappyIcon, QuestionMarkCircleIcon } from "@heroicons/react/outlin
 function Aboutme() {
 
     return (
-        <div className="min-w-screen-lg min-h-screen bg-primary dark:bg-primary" >
+        <div className="min-w-screen-lg min-h-screen" >
             <div className="flex flex-col lg:mx-auto  lg:w-[66%]">
                 <div>
                     <Heading title="About Me" Icon={EmojiHappyIcon} extrastyle="font-bold" />
