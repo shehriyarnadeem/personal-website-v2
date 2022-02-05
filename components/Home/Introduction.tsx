@@ -10,14 +10,14 @@ function Introduction() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: 'spring', stiffness: 20, duration: 1 }} className="flex flex-auto flex-col max-w-lg max-h-56 self-center space-y-9 lg:px-0 px-5">
-                    <h2 className="md:text-center lg:text-left">Hi, I’m Shehriyar. I’m an experienced Web Engineer.</h2>
-                    <motion.div
+                    <h2 className="md:text-center lg:text-left text-4xl font-extrabold dark:text-dark text-light">Hi, I’m Shehriyar. I’m an experienced Web Engineer.</h2>
+                    {/* <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 4 }}
                         transition={{ type: 'spring', stiffness: 20, delay: 1 }}
                         className="flex lg:self-start self-center">
-                        <Button title="Read Blog" className="btn btn-lg rounded-full bg-base-100 dark:text-gray-900 dark:bg-white  text-white items-center" />
-                    </motion.div>
+                        <Button title="Read Blog" className="btn btn-lg rounded-full dark:bg-green-700 bg-gray-500 dark:text-gray-700 text-white text-xl font-extrabold font-mono dark:hover:bg-green-100 hover:text-gray-700 " />
+                    </motion.div> */}
                 </motion.div>
                 <motion.div className="avatar self-center right-16"
                     initial={{ scale: 0.4, opacity: 0 }}

@@ -19,18 +19,25 @@ module.exports = {
         hoverCard: "var(--bg-hover-card)",
       },
       fontFamily: {
+        alfaSlab: ["Alfa Slab One, cursive", ...defaultTheme.fontFamily.sans],
         poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
         jura: ["Jura", ...defaultTheme.fontFamily.sans],
         heebo: ["Heebo", ...defaultTheme.fontFamily.sans],
+        ubuntu: ["Ubuntu, Lato, Journal, Merriweather", ...defaultTheme.fontFamily.sans]
       },
       textColor: {
-        primary: "var(--text-primary)",
+        forePrimary: "var(--text-primary)",
+        blogTextColor: "var(--color-font-blog)",
+        dark: "var(--color-dark-text)",
+        light: "var(--color-light-text)",
+        darkHeading: "var(--color-dark-heading)"
       },
     },
   },
   variants: {
     extend: {},
   },
+  
   plugins: [require("daisyui"), require('@themesberg/flowbite/plugin')],
   daisyui: {
     styled: false,

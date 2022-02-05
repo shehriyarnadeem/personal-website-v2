@@ -31,6 +31,10 @@ export const getBlogPost = (slug: string, hostname: string = "shehriyarnadeem") 
               contentMarkdown
               dateUpdated
               brief
+              author{
+                  photo
+                  name
+              }
               coverImage
               dateAdded
               type

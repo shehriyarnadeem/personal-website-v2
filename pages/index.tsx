@@ -4,8 +4,8 @@ import Introduction from "../components/Home/Introduction";
 import CardList from "../components/Card";
 import Heading from "../components/Heading";
 import { PencilIcon } from "@heroicons/react/outline";
-import { getUserArticles } from '../lib/GraphQlQueries';
-import { sendGraphQlQueryPost } from '../lib/helpers'
+import { getUserArticles } from '../common/GraphQlQueries';
+import { sendGraphQlQueryPost } from '../common/utils/apiUtils'
 
 export async function getStaticProps() {
 
@@ -71,8 +71,10 @@ export default function index(props) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lobster&family=Mulish:wght@200&display=swap" rel="stylesheet" />
     {/* <!-- Fathom - beautiful, simple website analytics --> */}
     <script src="https://cdn.usefathom.com/script.js" data-site="HXSYKITK" defer></script>
+    
    {/* <!-- / Fathom --> */}
       </Head>
 
