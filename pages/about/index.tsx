@@ -9,13 +9,13 @@ function Aboutme() {
             <div className="flex flex-col lg:mx-auto  lg:w-[66%]">
                 <div>
                     <Heading title="About Me" Icon={EmojiHappyIcon} extrastyle="font-bold" />
-                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl w-[39rem] dark:text-white text-gray-700">I'm Shehriyar, I work full-time as a Web engineer at 10pearls, Pvt. In my free time, I study Full stack development. My goal is to write useful apps and contribute to open source projects while working a full-time job.</p>
+                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl w-[39rem] dark:text-dark text-light">I'm Shehriyar, I work full-time as a Web engineer at <a href="https://10pearls.com" className='font-extrabold dark:hover:text-green-800 hover:text-blue-600'>10pearls, Pvt</a>. In my free time, I study Full stack development. My goal is to write useful apps and contribute to open source projects while working a full-time job.</p>
                 </div>
             </div>
             <div className="flex flex-col lg:mx-auto  lg:w-[66%]">
                 <div>
                     <Heading title="Why make this website?" Icon={QuestionMarkCircleIcon} extrastyle="font-bold" />
-                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl w-[39rem] dark:text-white text-gray-700">I made this website to learn what actually goes into web development. From planning, design, development, launch, and maintenance. For sure there are other things that I have yet to encounter, and I’m ready to learn them. This also serves a motivation for me to continue making projects because now I finally have a place to showcase them.</p>
+                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl w-[39rem] dark:text-dark text-light">I made this website to learn what actually goes into web development. From planning, design, development, launch, and maintenance. For sure there are other things that I have yet to encounter, and I’m ready to learn them. This also serves a motivation for me to continue making projects because now I finally have a place to showcase them.</p>
                 </div>
             </div>
         </div>

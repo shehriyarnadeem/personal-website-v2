@@ -102,13 +102,13 @@ const libraries = [
 function Projects() {
 
     return (
-        <div className="min-h-screen" >
+        <div className="min-h-screen lg:p-0 md:p-0 p-9" >
             <div className="flex flex-col lg:mx-auto  lg:w-[66%]">
                 <div>
                     <Heading title="Projects" Icon={LightBulbIcon} extrastyle="font-bold" />
-                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl w-[39rem] dark:text-white text-gray-700">Some of my recent works and contributions</p>
+                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl w-[39rem] dark:text-dark text-light">Some of my recent works and contributions</p>
                 </div>
-                <div className="flex flex-wrap ">
+                <div className="flex flex-wrap">
                     {projects.map(project => {
                         return <a key={project.id} href={project.link ? project.link : ''}>
                             <Box title={project.title} desc={project.desc} tags={project.tags} />

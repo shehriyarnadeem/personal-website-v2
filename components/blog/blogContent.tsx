@@ -7,7 +7,7 @@ function BlogContent({content}) {
   return (
   <div>
       <ReactMarkdown 
-       className={mardownCss.reactMarkDown} 
+       className={mardownCss['reactMarkDown']} 
        components={CodeBlock}
        remarkPlugins={[remarkGfm]}
       >

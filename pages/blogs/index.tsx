@@ -11,16 +11,15 @@ function Blogs(params) {
     const { blogs: { data: { user: { publication: { posts } } } } } = params;
 
     return (
-        <div className=" min-h-screen bg-primary dark:bg-primary" >
+        <div className=" min-h-screen bg-primary dark:bg-primary lg:p-0 md:p-0 p-5" >
             <div className="flex flex-col lg:mx-auto  lg:w-[66%]">
                 <div>
                     <Heading title="Blogs" Icon={PencilIcon} extrastyle="font-bold" />
-                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl lg:w-[39rem] md:w-[30rem]">Sometimes i write about things i learn in web development and also stuff that i find intresting</p>
+                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl lg:w-[39rem] md:w-[30rem] mt-3 dark:text-dark text-light">Sometimes i write about things i learn in web development and also stuff that i find intresting</p>
                 </div>
                 <div className="flex flex-col  py-9">
                     {posts.map(post => {
                         return (
-
                             <><div className="cursor-pointer" key={Math.random()}>
                                 <Link href={`/blogs/${post.slug}`}>
                                     <Image src={post.coverImage || 'https://dummyimage.com/250/ffffff/000000 '} className="rounded-lg shadow-lg" width={550} height={300} objectFit="contain" alt="dummy"/>

@@ -32,7 +32,7 @@ function Header() {
 <nav className="px-2 sm:px-4 py-2.5 rounded  lg:w-full md:w-full">
   <div className="container flex flex-wrap justify-between items-center mx-auto">
   <div>
-    <Link href="/"><a className="hover:underline cursor-pointer"><h1>Shehriyar Nadeem</h1></a></Link>
+    <Link href="/"><a className="hover:underline cursor-pointer  text-xl dark:text-dark text-gray-900 "><h1>Shehriyar Nadeem</h1></a></Link>
  </div>
   <div className="flex items-center md:order-2">
     <DarkModeButton />

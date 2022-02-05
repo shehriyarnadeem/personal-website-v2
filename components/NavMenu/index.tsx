@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+
 const content = [
   { name: "Blog", link: "/blogs", key: 1 },
   { name: "Projects", link: "/projects", key: 2 },
@@ -15,9 +16,9 @@ function NavMenu({open}) {
             <Link href={`${item.link}`} key={item.key}>
               <li
                 key={item.key}
-                className="text-lg font-light dark:text-green-400  dark:hover:text- hover:text-blue-900 text-gray-900 cursor-pointer font-poppins "
+                className="text-lg cursor-pointer font-poppins font-bold  "
               >
-               <span className="block py-2 pr-4 pl-3 dark:text-white dark:hover:text-green-600  text-black hover:text-gray-500 rounded md:bg-transparent md:p-0"> {item.name}</span>
+               <span className=" dark:text-dark text-light text-xl mb-4 dark:hover:text-white hover:text-blue-600">{item.name}</span>
               </li>
             </Link>
           );

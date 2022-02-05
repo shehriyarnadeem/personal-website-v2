@@ -7,7 +7,7 @@ function BlogPost(props) {
     const { data: { post } } = props.data;
     return (   
         <div className="bg-primary dark:bg-primary">
-            <article className="max-w-3xl mx-auto p-5">
+            <article className="mx-auto p-5 max-w-5xl">
               <BlogDetails post={post} />
               <BlogContent  content={post.contentMarkdown} />
             </article>
