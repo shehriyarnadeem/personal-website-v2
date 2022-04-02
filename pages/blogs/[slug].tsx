@@ -9,7 +9,7 @@ function BlogPost(props) {
     return (
         <>
         <Head>
-        <title>{post.title}</title>
+        <title>{post && post.title}</title>
         <meta
         name="description"
         content= {post.brief} />

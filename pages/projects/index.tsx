@@ -2,13 +2,7 @@ import React from 'react'
 import Heading from '../../components/Heading'
 import { LightBulbIcon } from "@heroicons/react/outline";
 import Box from '../../components/ProjectBox/Box'
-const projects = [{
-    title: 'Personal Website',
-    desc: "My presonall project",
-    tags: ["Next js", "Tailwind"],
-    link: "http://localhost:3000/",
-    id: 1
-},
+const projects = [
 {
     title: 'Madox Productions',
     desc: "A Media Production web application Built Next JS",
@@ -21,6 +15,7 @@ const projects = [{
     desc: "Covid 19 Tracker application for monitoring realtime patiens",
     tags: ["Firebase", "React"],
     link: "https://covid19-tracker-a3a8b.firebaseapp.com/",
+    githubLink:"https://github.com/shehriyarnadeem/Covid19_tracker_react_js",
     id: 3
 },
 {
@@ -28,6 +23,7 @@ const projects = [{
     desc: "Real world columbian coffee admin managment system",
     tags: ["Firebase", "React"],
     link: "https://colombiancoffeeclub-f6642.web.app/#/login",
+    githubLink:"https://github.com/shehriyarnadeem/columbianCoffee",
     id: 4
 },
 {
@@ -35,6 +31,7 @@ const projects = [{
     desc: "A clone i made of Netlix includes the Front-end part only",
     tags: ["React", "CSS"],
     link: "https://netflixclone-94e85.web.app",
+    githubLink:"https://github.com/shehriyarnadeem/netflix-clone",
     id: 5
 },
 {
@@ -56,13 +53,14 @@ const projects = [{
     desc: "A full stack application to store / list places you have traveled.",
     tags: ["React", "CSS"],
     link: "https://github.com/shehriyarnadeem/TravelLog",
+    githubLink:"https://github.com/shehriyarnadeem/TravelLog",
     id: 8
 },
 {
-    title: 'Advance Note Taking application',
+    title: 'Xugen Admin',
     desc: "A full Stack application Todo Application for monitoring your daily tasks",
     tags: ["React", "CSS"],
-    link: "https://github.com/shehriyarnadeem/TravelLog",
+    link: "https://xugen-7c8eb.web.app/#/login",
     id: 9
 }
 ]
@@ -73,6 +71,7 @@ const libraries = [
         desc: "A Npm library for creating and applying box-shadow with easy props",
         tags: ["Javascript", "Css"],
         link: "https://github.com/shehriyarnadeem/shadowMaker",
+        githubLink:"https://github.com/shehriyarnadeem/common-errors-middlewares",
         id: 1
     },
     {
@@ -81,6 +80,7 @@ const libraries = [
         desc: "Common Middlewares and Errors is a Node js library which provides a clean structure for all your customized error handlers and middlewares.",
         tags: ["Node", "Js"],
         link: "https://github.com/shehriyarnadeem/common-errors-middlewares",
+        githubLink:"https://github.com/shehriyarnadeem/common-errors-middlewares",
         id: 2
     },
     {
@@ -88,6 +88,7 @@ const libraries = [
         desc: "Urdu language addition as a opensource contribution in Letra extension",
         tags: ["React", "Node Js"],
         link: "https://github.com/shehriyarnadeem/letra-extension",
+        githubLink:"https://github.com/shehriyarnadeem/letra-extension",
         id: 3
     },
 
@@ -105,7 +106,7 @@ function Projects() {
                 <div className="flex flex-wrap">
                     {projects.map(project => {
                         return <a key={project.id} href={project.link ? project.link : ''}>
-                            <Box title={project.title} desc={project.desc} tags={project.tags} />
+                            <Box title={project.title} desc={project.desc} tags={project.tags} projectLink={project.link} githubLink={project.githubLink} />
                         </a>
                     })}
                 </div>
@@ -116,7 +117,7 @@ function Projects() {
                 <div className="flex flex-wrap ">
                     {libraries.map(library => {
                         return <a key={library.id} href={library.link ? library.link : ''}>
-                            <Box title={library.title} desc={library.desc} tags={library.tags} />
+                            <Box title={library.title} desc={library.desc} tags={library.tags} projectLink={library.link} githubLink={library.githubLink} />
                         </a>
                     })}
                 </div>

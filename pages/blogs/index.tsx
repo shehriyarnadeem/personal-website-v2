@@ -1,12 +1,11 @@
 import React from 'react';
 import CardList from '../../components/Card';
 import Heading from '../../components/Heading';
-import { getUserArticles } from '../../lib/GraphQlQueries';
-import { sendGraphQlQueryPost } from '../../lib/helpers'
+import { getUserArticles } from '../../common/GraphQlQueries';
+import { sendGraphQlQueryPost } from '../../common/utils/apiUtils'
 import { PencilIcon } from "@heroicons/react/outline";
 import Link from 'next/link';
 import Image from 'next/image';
-
 function Blogs(params) {
     const { blogs: { data: { user: { publication: { posts } } } } } = params;
 
