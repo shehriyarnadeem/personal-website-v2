@@ -1,41 +1,35 @@
 import React from 'react'
+import { sendGraphQlQueryPost } from '../../common/utils/apiUtils';
+import { getBlogPost, getUserArticles } from '../../common/GraphQlQueries';
+import { BlogContent, BlogDetails } from '../../components/blog';
 import Head from 'next/head';
-import { sendGraphQlQueryPost } from '../../lib/helpers';
-import { getBlogPost, getUserArticles } from '../../lib/GraphQlQueries';
-import PostContent from '../../components/Post/PostContent'
+
 function BlogPost(props) {
     const { data: { post } } = props.data;
-
     return (
         <>
         <Head>
-            <meta
-          name="description"
-          content= {post.brief}
-        />
+        <title>{post.title}</title>
         <meta
-          name="keywords"
-          content="Javascript, Building Websites, Learn React, Software Engineer Blogs, Learn Javascript"
-        />
+        name="description"
+        content= {post.brief} />
         <meta
-          name="image"
-          content={post.coverImage}
+        name="keywords"
+        content="Javascript, Building Websites, Learn React, Software Engineer Blogs, Learn Javascript"
         />
+        <meta name="image" content={post.coverImage} />
         <meta property="og:url" content="http://shehriyarnadeem.dev" />
         <meta property="og:title" content={post.title} />
-        <meta
-      property="og:description"
-      content={post.brief}
-    />
-    <meta
-    property="og:image"
-    content={post.coverImage}
-    />
-   </Head>    
-        <div className="min-w-screen-lg min-h-screen bg-primary dark:bg-primary " >
-            <PostContent title={post.title} image={post.coverImage} date={post.date} content={post.contentMarkdown} />
+        <meta property="og:description"content={post.brief} />
+        <meta property="og:image" content={post.coverImage} />
+    </Head>    
+        <div className="bg-primary dark:bg-primary">
+            <article className="mx-auto p-5 max-w-5xl">
+              <BlogDetails post={post} />
+              <BlogContent  content={post.contentMarkdown} />
+            </article>
         </div>
-  </>
+        </>
     )
 }
 
@@ -61,7 +55,6 @@ export async function getStaticPaths() {
     return {
         // must be in this format:
         paths: path,
-
         fallback: 'blocking',
     };
 }

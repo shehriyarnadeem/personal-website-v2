@@ -2,43 +2,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
 
   body {
-    @apply lg:w-full md:w-full min-w-max
+    @apply dark:bg-primary bg-primary min-w-min
+    
   }
 
   h1 {
-    @apply leading-tight text-2xl text-black dark:text-white mt-4 ;
+    @apply leading-tight   dark:text-forePrimary text-gray-400 mt-4 ;
   }
 
   h2 {
-    @apply leading-tight  text-4xl font-extrabold lg:mt-0  sm:text-left md:text-center lg:text-left font-poppins text-black dark:text-white mb-4;
+    @apply leading-tight lg:mt-0  sm:text-left md:text-center lg:text-left font-poppins dark:text-forePrimary text-gray-400 mb-4;
   }
 
   h3 {
-    @apply leading-tight text-3xl text-black dark:text-white mt-4 ;
+    @apply leading-tight text-black dark:text-white ;
   }
 
   h4 {
-    @apply leading-tight text-2xl font-light font-serif mt-4 ;
+    @apply leading-tight font-light font-serif mt-4 ;
   }
   pre {
-    @apply dark:bg-gray-900 bg-green-900 p-10  w-max mt-10 mb-5  border bg-opacity-5;
+    @apply dark:bg-gray-900 bg-green-900 p-10 overflow-x-auto mt-10 mb-5  border bg-opacity-5 text-[17px];
   }
   
 }
 
 @layer utilities {
-  p {
-    @apply font-sans;
-  }
-  img {
-    @apply my-10;
-  }
   code {
-    dark: text-white;
+    @apply dark:text-white text-black overflow-scroll
+    
   }
 }
 
@@ -58,6 +53,8 @@
   --color-gray-800: #2e3039;
   --color-gray-900: #1f2028;
   --color-green-100: #e7f9ed;
+  --color-green-200: #bdf0da;
+  --color-green-300: #8fa595;
   --color-green-500: #30c85e;
   --color-green-600: #68d94a;
   --color-red-500: #ff4545;
@@ -70,6 +67,8 @@
   /* yellow in light mode is... hard */
   --color-team-yellow: #a08600;
   --color-yellow-500: #a08600;
+  --color-fore-primary: hsla(214,32%,91%,var(--tw-text-opacity));
+  --color-green-text: #cbe1dcfa;
 }
 
 .light {
@@ -81,10 +80,11 @@
   --bg-hover-card: #edf2f6;
   --bg-alt: var(--color-gray-200);
   --border-secondary: var(--color-gray-200);
-  --text-primary: var(--color-black);
+  --text-fore-primary: var(--color-fore-primary);
   --text-secondary: var(--color-gray-500);
-
   --color-font-highlight: var(--color-blue-font-highight);
+  --color-font-blog: var( --color-gray-500);
+  --color-light-text: var(--color-gray-500);
 }
 
 .dark {
@@ -98,7 +98,9 @@
   --bg-theme-back: var(--bg-base-100);
   --bg-alt: var(--color-gray-700);
   --border-secondary: var(--color-gray-600);
-  --text-primary: var(--color-white);
   --text-secondary: var(--color-blueGray-500);
   --color-font-highlight: var(--color-green-font-highight);
+  --color-font-blog: var(--color-green-300);
+  --color-dark-text: var(--color-green-text);
+  --color-dark-heading: var(--color-green-200);
 }
