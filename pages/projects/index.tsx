@@ -1,9 +1,7 @@
 import React from 'react'
 import Heading from '../../components/Heading'
-import Link from 'next/dist/client/link';
 import { LightBulbIcon } from "@heroicons/react/outline";
 import Box from '../../components/ProjectBox/Box'
-import { gitApiRequest } from '../../lib/helpers';
 const projects = [{
     title: 'Personal Website',
     desc: "My presonall project",
@@ -12,10 +10,10 @@ const projects = [{
     id: 1
 },
 {
-    title: 'LinkedIn Clone',
-    desc: "My presonall project",
-    tags: ["Tailwind", "Css"],
-    link: "https://linkedinclone-a638d.web.app",
+    title: 'Madox Productions',
+    desc: "A Media Production web application Built Next JS",
+    tags: ["NextJs", "Youtube APIs", "CSS"],
+    link: "https://www.madoxproductions.com/",
     id: 2
 },
 {
@@ -33,41 +31,35 @@ const projects = [{
     id: 4
 },
 {
-    title: 'Slack Clone',
-    desc: "Slack clone with a realtime chat feature just like slack",
-    tags: ["React", "Node", "Socket.io"],
-    id: 5
-},
-{
     title: 'Netflix Clone',
     desc: "A clone i made of Netlix includes the Front-end part only",
     tags: ["React", "CSS"],
     link: "https://netflixclone-94e85.web.app",
+    id: 5
+},
+{
+    title: 'Product Market Comparision Web application',
+    desc: "A Hybrid Mobile application for live market prices and feature comparisions",
+    tags: ["React Native", "React Animations"],
+    link: "https://youtu.be/jsDDnA0J-M4",
     id: 6
 },
 {
-    title: 'Todo Application',
-    desc: "A clone i made of Netlix includes the Front-end part only",
-    tags: ["React", "CSS"],
-    link: "https://netflixclone-94e85.web.app",
+    title: 'Breath Regulation Monitoring App',
+    desc: "A Hybrid mobile application IOS and Android for breath regulation monitoring.",
+    tags: ["React Native"],
+    link: "https://youtu.be/qMFtz0Ikfpc",
     id: 7
-},
-{
-    title: 'Youtube Clone',
-    desc: "A clone i made of Youtube includes the Front-end part only",
-    tags: ["React", "CSS"],
-    link: "https://github.com/shehriyarnadeem/Yotube-Clone",
-    id: 8
 },
 {
     title: 'Travel Log',
     desc: "A full stack application to store / list places you have traveled.",
     tags: ["React", "CSS"],
     link: "https://github.com/shehriyarnadeem/TravelLog",
-    id: 9
+    id: 8
 },
 {
-    title: 'Todo Application',
+    title: 'Advance Note Taking application',
     desc: "A full Stack application Todo Application for monitoring your daily tasks",
     tags: ["React", "CSS"],
     link: "https://github.com/shehriyarnadeem/TravelLog",
@@ -104,13 +96,13 @@ const libraries = [
 function Projects() {
 
     return (
-        <div className="min-h-screen bg-primary dark:bg-primary" >
+        <div className="min-h-screen lg:p-0 md:p-0 p-9" >
             <div className="flex flex-col lg:mx-auto  lg:w-[66%]">
                 <div>
                     <Heading title="Projects" Icon={LightBulbIcon} extrastyle="font-bold" />
-                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl w-[39rem] dark:text-white text-gray-700">Some of my recent works and contributions</p>
+                    <p className="my-[10px] lg:pl-[5px] pl-[15px] font-sans tracking-[0.5px] text-xl w-[39rem] dark:text-dark text-light">Some of my recent works and contributions</p>
                 </div>
-                <div className="flex flex-wrap ">
+                <div className="flex flex-wrap">
                     {projects.map(project => {
                         return <a key={project.id} href={project.link ? project.link : ''}>
                             <Box title={project.title} desc={project.desc} tags={project.tags} />
