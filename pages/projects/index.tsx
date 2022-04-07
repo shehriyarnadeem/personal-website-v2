@@ -38,14 +38,14 @@ const projects = [
     title: 'Product Market Comparision Web application',
     desc: "A Hybrid Mobile application for live market prices and feature comparisions",
     tags: ["React Native", "React Animations"],
-    link: "https://youtu.be/jsDDnA0J-M4",
+    link: "https://www.youtube.com/watch?v=jsDDnA0J-M4",
     id: 6
 },
 {
     title: 'Breath Regulation Monitoring App',
     desc: "A Hybrid mobile application IOS and Android for breath regulation monitoring.",
     tags: ["React Native"],
-    link: "https://youtu.be/qMFtz0Ikfpc",
+    link: "https://www.youtube.com/watch?v=qMFtz0Ikfpc",
     id: 7
 },
 {
