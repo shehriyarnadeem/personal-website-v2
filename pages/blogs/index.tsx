@@ -37,7 +37,7 @@ function Blogs(params) {
 
 export async function getStaticProps() {
 
-    const blogs = await sendGraphQlQueryPost(getUserArticles("shehriyarnadeem", 0));
+    const blogs = await sendGraphQlQueryPost(getUserArticles("shehriyarnadeem", 1));
 
     return {
         revalidate: 7200,

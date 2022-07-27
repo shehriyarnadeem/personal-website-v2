@@ -6,25 +6,28 @@ import Heading from "../components/Heading";
 import { PencilIcon } from "@heroicons/react/outline";
 import { getUserArticles } from '../common/GraphQlQueries';
 import { sendGraphQlQueryPost } from '../common/utils/apiUtils'
+import Link from 'next/link';
+import Image from 'next/image';
 
 export async function getStaticProps() {
 
   const blogs = await sendGraphQlQueryPost(getUserArticles("shehriyarnadeem", 0));
+  const videos = await fetchMyAPI();
   return {
     revalidate: 7200,
-    props: blogs
+    props: {blogs, videos}
   }
 }
 
+async function fetchMyAPI() {
+  let response = await fetch('https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCFdsGxVtQP-zX0JV_R4iFMg&maxResults=100&key=AIzaSyDp_UL8FlQNiZnh1U5s5SC5vH09fkIgN5Y');
+  const data =  response.json();
+  return data;
+}
 export default function index(props) {
-  const {
-    data: {
-      user: {
-        publication: { posts },
-      },
-    },
-  } = props
-
+  
+  const { blogs:{data:{user:{publication: { posts }}}}} = props;
+  const {videos} = props;
   return (
     <div>
       <Head>
@@ -82,14 +85,26 @@ export default function index(props) {
         <div>
           <Introduction />
           <div className="flex-1">
-            <Heading title="WRITINGS" Icon={PencilIcon} />
-            <div className="py-4 lg:px-0 px-3 mx-auto">
+              <Heading title="WRITINGS" Icon={PencilIcon} placementStyle="justify-center" extrastyle='text-4xl' />
+               <div className="py-4 lg:px-0 px-3 mx-auto flex flex-wrap justify-evenly space-y-10 items-center">
               {posts.length > 0 ?
                 posts.map((post) => {
-                  return <CardList post={post} key={Math.random()} />;
+                  return (
+                  <> 
+                <div>
+                  <div className="cursor-pointer" key={Math.random()}>
+                      <Link href={`/blogs/${post.slug}`}>
+                          <Image src={post.coverImage || 'https://dummyimage.com/250/ffffff/000000 '} className="rounded-lg shadow-lg" width={550} height={300} objectFit="cover" alt="dummy"/>
+                      </Link>
+                  </div>
+                  <CardList post={post} key={Math.random()} />
+                  </div>
+                  </>
+                )
                 }) : (<div key={Math.random()}></div>)}
-            </div>
           </div>
+          </div>
+          <div className='justify-center flex cursor-pointer'><Link href={`/blogs`}><h3 className="text-xl dark:text-dark text-light  hover:dark:text-white">Read More</h3></Link></div>
           <div className="py-11"></div>
         </div>
       </main>
