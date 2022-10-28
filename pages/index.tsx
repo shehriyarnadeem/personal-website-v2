@@ -40,6 +40,7 @@ export default function index(props) {
           name="keywords"
           content="Javascript, Building Websites, Learn React, Software Engineer Blogs, Learn Javascript"
         />
+        <meta name="google-site-verification" content="8SncLVGBqWIau-lr7iETiDx8F8bWqLo1v9LkQyf9_R8" />
         <meta
           name="image"
           content="https://shehriyarnadeem.dev/urlThumbnail.png"
